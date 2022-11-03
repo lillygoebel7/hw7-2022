@@ -41,12 +41,19 @@ document.querySelector("#skip").addEventListener("click", function() {
 	console.log("Current Time: " + video.currentTime)
 });
 
-document.querySelector('#mute').addEventListener("click", function() {
+document.querySelector("#mute").addEventListener("click", function() {
 	console.log("mute button pressed")
-	if (video.muted = true){
+	if (video.muted == false) {   
+		video.muted = true;
 		console.log("Video Muted")
-		document.querySelector('#mute').innerHTML = "Unmute"
-	}
+		document.querySelector('#mute').innerHTML = "Unmute";
+	 	}
+ 
+	else {
+		video.muted = false;
+		console.log("Video Umuted")
+		document.querySelector('#mute').innerHTML = "Mute";
+	 	}
 });
 
 document.querySelector('#slider').addEventListener("click", function(){
